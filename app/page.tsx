@@ -1,6 +1,11 @@
+import skills from "@/data/skills.json"
+import projects from "@/data/projects.json"
+import education from "@/data/education.json"
+
 export default function Home() {
   return (
     <main className="px-24">
+
       <section id="hero" className="flex items-center justify-between">
         <div className="w-2/3 pr-20 py-10">
           <p className="text-4xl">
@@ -41,145 +46,48 @@ export default function Home() {
       </section>
 
       <section id="skills" className="py-5">
+
         <h2>Skills</h2>
-        <div className="flex justify-between py-5">
-          <div className="flex flex-col items-center">
-            <img src="/1-react.svg" alt="React" />
-            <p>React.js</p>
-          </div>
 
-          <div className="flex flex-col items-center">
-            <img src="/2-angular.svg" alt="Angular" />
-            <p>Angular</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/3-nest.svg" alt="Nest.js" />
-            <p>Nest.js</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/4-next.svg" alt="Next.js" />
-            <p>Next.js</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/5-node.svg" alt="Node.js" />
-            <p>Node.js</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/6-javascript.svg" alt="JavaScript" />
-            <p>JavaScript</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/7-css.svg" alt="CSS3" />
-            <p>CSS3</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/8-html.svg" alt="HTML5" />
-            <p>HTML5</p>
-          </div>
-        </div>
+        <div className="grid grid-cols-8 gap-8">
           
-        <div className="flex justify-between py-5">
-          <div className="flex flex-col items-center">
-            <img src="/9-git.svg" alt="Git" />
-            <p>Git</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/10-github.svg" alt="GitHub" />
-            <p>GitHub</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/11-sql.svg" alt="SQL" />
-            <p>SQL</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/12-docker.svg" alt="Docker" />
-            <p>Docker</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/13-postman.svg" alt="Postman" />
-            <p>Postman</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/14-bootstrap.svg" alt="Bootstrap" />
-            <p>Bootstrap</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/15-tailwind.svg" alt="Tailwind CSS" />
-            <p>Tailwind</p>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img src="/16-figma.svg" alt="Figma" />
-            <p>Figma</p>
-          </div>
-
+          {skills.map((skill, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <img src={skill.src} alt={skill.alt} />
+              <p>{skill.name}</p>
+            </div>
+          ))}
+        
         </div>
 
       </section>
 
-      <section id="education">
+      <section id="education" className="py-5">
         <h2>Formación</h2>
 
         <div>
-          
-          <div className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] before:bg-[#1e1b2e]
-            after:content-[''] after:absolute after:top-5 after:-left-[0.09rem] after:h-full after:w-[2px] after:bg-[#E384FF] after:opacity-50 last:after:hidden">
-            <h3 className="pb-2">
-              Programa Oracle Next Education Front-end
-            </h3>
-            <p className="pb-2">
-              Abril 2024 - Enero 2025
-            </p>
-
-            <div className="flex gap-16">
-              <p className="text-justify">
-                Desarrollo Front-End con React y JavaScript: creación de componentes, navegación, estilos con Styled Components, Hooks y consumo de APIs. Capacitación en HTML, CSS responsivo, Typescript, manipulación del DOM e integración de IA con ChatGPT y GitHub Copilot. <br />
-                Complementado con formación en Desarrollo Personal y Protagonismo Profesional, enfocada en productividad, gestión de hábitos, optimización del perfil en LinkedIn, fundamentos ágiles y emprendimiento.
+          {education.map((education, index) => (
+            <div key={index} className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] before:bg-[#1e1b2e]
+              after:content-[''] after:absolute after:top-5 after:-left-[0.09rem] after:h-full after:w-[2px] after:bg-[#E384FF] after:opacity-50 last:after:hidden">
+              <h3 className="pb-2">
+                {education.name}
+              </h3>
+              <p className="pb-2">
+                {education.date}
               </p>
-              <img src="/alura-latam.svg" alt="ALURA LATAM" />
+              <div  className="flex gap-16">
+             
+                <p className="text-justify">
+                  {education.description}
+                </p>
+
+                <img src={education.src} alt={education.alt} />
+              </div>
+              
+
+  
             </div>
-
-          </div>
-
-          <div className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] before:bg-[#1e1b2e]
-            after:content-[''] after:absolute after:top-5 after:-left-[0.09rem] after:h-full after:w-[2px] after:bg-[#E384FF] after:opacity-50 last:after:hidden">
-            <h3 className="pb-2">
-              Escuela de Educación Superior Tecnológica IDAT
-            </h3>
-            <p className="pb-2">
-              Enero 2024 - Actualmente
-            </p>
-
-            <div className="flex gap-16">
-              <p className="text-justify">
-                Formación en programación estructurada y orientada a objetos, desarrollo web, diseño de interfaces y bases de datos relacionales y no relacionales. Capacitación en patrones de diseño, calidad de software, ciberseguridad, DevOps y auditoría de TI. Enfoque en metodologías ágiles, computación en la nube, transformación digital e inteligencia artificial. Desarrollo de proyectos aplicados en software empresarial, integración de capas de datos, negocio y vista, y creación de aplicaciones móviles y en la nube.
-              </p>
-              <img src="/idat.svg" alt="IDAT" />
-            </div>
-
-          </div>
-
-          <div className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] before:bg-[#1e1b2e]
-            after:content-[''] after:absolute after:top-5 after:-left-[0.09rem] after:h-full after:w-[2px] after:bg-[#E384FF] after:opacity-50 last:after:hidden">
-            <h3 className="pb-2">
-              Ingeniería Civil - Universidad Nacional de San Martín
-            </h3>
-            <p className="pb-2">
-              Marzo 2012 - Diciembre 2016
-            </p>
-          </div>
+          ))}
 
         </div>
 
@@ -187,13 +95,38 @@ export default function Home() {
 
       </section>
 
-      <section id="projects">
+      <section id="projects" className="py-5">
         <h2>
           Proyectos
         </h2>
+
+        <div className="grid grid-cols-3 justify-items-center py-6">
+
+          {projects.map((project, index) => (
+            <div key={index} className="flex flex-col rounded-xl border-2 border-[#FFA3FD]">
+
+              <div>
+                <p className="text-center py-2">{project.name}</p>
+              </div>
+  
+              <div>
+                <img src={project.src} alt={project.alt} className="px-1 w-100"/>
+              </div>
+  
+              <div className="flex py-2 justify-center gap-2">
+                {project.skills.map((skill, i) => 
+                  <img key={i} src={skill} className="w-8 h-8"/>
+                )}              
+              </div>
+  
+            </div>
+          ))}
+
+        </div>
+
       </section>
 
-      <section id="contact">
+      <section id="contact" className="py-5">
         <h2>
           Hablemos
         </h2>

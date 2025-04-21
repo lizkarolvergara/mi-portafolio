@@ -1,0 +1,97 @@
+[
+    { 
+        "src": "1-react.svg", 
+        "alt": "React", 
+        "name": "React.js" 
+    },
+
+    { 
+        "src": "/2-angular.svg", 
+        "alt": "Angular", 
+        "name": "Angular" 
+    },
+
+    { 
+        "src": "/3-nest.svg", 
+        "alt": "Nest.js", 
+        "name": "Nest.js" 
+    },
+
+    { 
+        "src": "/4-next.svg", 
+        "alt": "Next.js", 
+        "name": "Next.js" 
+    },
+
+    { 
+        "src": "/5-node.svg", 
+        "alt": "Node.js", 
+        "name": "Node.js" 
+    },
+
+    { 
+        "src": "/6-javascript.svg", 
+        "alt": "JavaScript", 
+        "name": "JavaScript" 
+    },
+
+    { 
+        "src": "/7-css.svg", 
+        "alt": "CSS3", 
+        "name": "CSS3" 
+    },
+
+    { 
+        "src": "/8-html.svg", 
+        "alt": "HTML5", 
+        "name": "HTML5" 
+    },
+
+    { 
+        "src": "/9-git.svg", 
+        "alt": "Git", 
+        "name": "Git" 
+    },
+
+    { 
+        "src": "/10-github.svg", 
+        "alt": "GitHub", 
+        "name": "GitHub" 
+    },
+
+    { 
+        "src": "/11-sql.svg", 
+        "alt": "SQL", 
+        "name": "SQL" 
+    },
+
+    { 
+        "src": "/12-docker.svg", 
+        "alt": "Docker", 
+        "name": "Docker" 
+    },
+
+    { 
+        "src": "/13-postman.svg", 
+        "alt": "Postman", 
+        "name": "Postman" 
+    },
+
+    { 
+        "src": "/14-bootstrap.svg", 
+        "alt": "Bootstrap", 
+        "name": "Bootstrap" 
+    },
+
+    { 
+        "src": "/15-tailwind.svg", 
+        "alt": "Tailwind CSS", 
+        "name": "Tailwind" 
+    },
+
+    { 
+        "src": "/16-figma.svg", 
+        "alt": "Figma", 
+        "name": "Figma" 
+    }
+]

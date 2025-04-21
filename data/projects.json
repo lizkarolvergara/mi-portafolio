@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Name Example",
+        "src": "imagen-ejemplo.png",
+        "alt": "ejemplo",
+        "skills": ["8-html.svg", "7-css.svg", "6-javascript.svg"]
+    },
+    {
+        "name": "Name Example",
+        "src": "imagen-ejemplo.png",
+        "alt": "ejemplo",
+        "skills": ["5-node.svg", "9-git.svg"]
+    },
+    {
+        "name": "Name Example",
+        "src": "imagen-ejemplo.png",
+        "alt": "ejemplo",
+        "skills": ["1-react.svg", "2-angular.svg", "3-nest.svg", "16-figma.svg"]
+    }
+]
