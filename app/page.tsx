@@ -8,29 +8,29 @@ export default function Home() {
 
       <section id="hero" className="flex items-center justify-between">
         <div className="w-2/3 pr-20 py-10">
-          <p className="text-4xl">
+          <p className="text-4xl tracking-in-contract">
             Hola, mi nombre es
           </p>
 
-          <h1 className="text-6xl text-[#865DFF] font-bold leading-relaxed">
+          <h1 className="text-6xl text-[#865DFF] font-bold leading-relaxed tracking-in-contract">
             Liz Karol Vergara
           </h1>
 
-          <p className="text-4xl font-bold">
+          <p className="text-4xl font-bold tracking-in-contract">
             y desarrollo páginas web <span className="text-[#FFA3FD]">.</span>
           </p>
 
-          <p >
+          <p className="text-flicker-in-glow">
             <br />            
             Actualmente estudiante de Desarrollo de Sistemas Front-end y Back-end en el instituto IDAT. Me interesa crear interfaces limpias, accesibles y funcionales, combinando diseño y tecnología para mejorar la experiencia del usuario. <br />
             <br />
             Con conocimientos en React, Next.js y Node.js, aplicando buenas prácticas de desarrollo y metodologías ágiles como Scrum. Siempre estoy explorando nuevas tecnologías y formas de optimizar el rendimiento y la usabilidad en mis proyectos. 
           </p>
-          <div  className="flex py-8 items-center gap-3">
-            <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank">
+          <div  className="flex py-8 items-center gap-3 text-flicker-in-glow">
+            <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank" className="icon">
               <img src="/linkedin.svg" alt="Linkedin" />
             </a>
-            <a href="https://github.com/lizkarolvergara" target="_blank">
+            <a href="https://github.com/lizkarolvergara" target="_blank"className="icon">
               <img src="/github.svg" alt="Github" />
             </a>
             <a href="/cv-lizkarolvergara.pdf" download className="underline font-medium">
@@ -45,6 +45,7 @@ export default function Home() {
         </div>
       </section>
 
+
       <section id="skills" className="py-5">
 
         <h2>Skills</h2>
@@ -52,8 +53,8 @@ export default function Home() {
         <div className="grid grid-cols-8 gap-8">
           
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <img src={skill.src} alt={skill.alt} />
+            <div key={index} className="flex flex-col items-center icon">
+              <img src={skill.src} alt={skill.alt} className=""/>
               <p>{skill.name}</p>
             </div>
           ))}
@@ -81,17 +82,15 @@ export default function Home() {
                   {education.description}
                 </p>
 
-                <img src={education.src} alt={education.alt} />
+                {education.src && (
+                  <img src={education.src} alt={education.alt} />
+                )}
               </div>
-              
 
-  
             </div>
           ))}
 
         </div>
-
-
 
       </section>
 
@@ -103,14 +102,16 @@ export default function Home() {
         <div className="grid grid-cols-3 justify-items-center py-6">
 
           {projects.map((project, index) => (
-            <div key={index} className="flex flex-col rounded-xl border-2 border-[#FFA3FD]">
-
+            <div key={index} className="project-card flex flex-col rounded-xl border-2 border-[#FFA3FD]">
+              
               <div>
                 <p className="text-center py-2">{project.name}</p>
               </div>
   
               <div>
-                <img src={project.src} alt={project.alt} className="px-1 w-100"/>
+                <a href="">
+                  <img src={project.src} alt={project.alt} className="project-img p-1"/>
+                </a>
               </div>
   
               <div className="flex py-2 justify-center gap-2">
@@ -130,24 +131,28 @@ export default function Home() {
         <h2>
           Hablemos
         </h2>
+
         <div className="flex justify-center gap-16 py-6">
 
-          <div className="flex rounded-xl p-4 border-3 border-[#FFA3FD] shadow-[0_4px_6px_-1px_rgba(255,163,253,0.5)]">
-            <div className="pr-5">
+          <div className="contact-pill group flex items-center rounded-full p-4 border-3 border-[#FFA3FD] overflow-hidden transition-all duration-500 w-[85px] hover:w-[360px] whitespace-nowrap">
+            <div className="pr-5 shrink-0">
               <img src="/mail.svg" alt="email" />
             </div>
-            <div>
-              <p>lizvergarareategui@gmail.com</p>
-              <a href="mailto:lizvergarareategui@gmailcom" className="underline">
+
+            <div className="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <p >lizvergarareategui@gmail.com</p>
+              <a href="mailto:lizvergarareategui@gmail.com" className="underline">
                 Enviar mensaje
               </a>
             </div>
           </div>
-          <div className="flex rounded-xl p-4 border-3 border-[#FFA3FD] pr-20 shadow-[0_4px_6px_-1px_rgba(255,163,253,0.5)]">
-            <div className="pr-5">
-              <img src="/whatsapp.svg" alt="email" />
+
+          
+          <div className="contact-pill group flex items-center rounded-full p-4 border-3 border-[#FFA3FD] overflow-hidden transition-all duration-500 w-[85px] hover:w-[360px] whitespace-nowrap">
+            <div className="pr-5 shrink-0">
+              <img src="/whatsapp.svg" alt="whatsapp" />
             </div>
-            <div>
+            <div className="flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <p>PER +51 975 203 430</p>
               <a href="https://wa.me/+51975203430" target="_blank" className="underline">
                 Enviar mensaje

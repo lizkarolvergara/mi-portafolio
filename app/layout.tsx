@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
+import "./animations.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -22,10 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="scroll-smooth">
       <body 
         className={`${jost.variable} font-[family-name:var(--font-jost)] antialiased bg-[#191825] text-white text-lg`}
       >
+
         <Navbar />
         
         {children}
