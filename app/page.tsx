@@ -1,6 +1,7 @@
 import skills from "@/data/skills.json"
 import projects from "@/data/projects.json"
 import education from "@/data/education.json"
+import AnimatedAvatar from "./components/AnimatedAvatar";
 
 export default function Home() {
   return (
@@ -40,8 +41,8 @@ export default function Home() {
 
         </div>
 
-        <div className="w-1/3">
-          <img src="/Image.png" alt="" />
+        <div className="w-1/3 focus-in-4">
+          <AnimatedAvatar />
         </div>
       </section>
 
@@ -53,9 +54,9 @@ export default function Home() {
         <div className="grid grid-cols-8 gap-8">
           
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center hover-scale">
-              <img src={skill.src} alt={skill.alt} className=""/>
-              <p>{skill.name}</p>
+            <div key={index} className="flex flex-col hover-scale">
+              <img src={skill.src} alt={skill.alt} className="mx-auto "/>
+              <p className="text-center">{skill.name}</p>
             </div>
           ))}
         
