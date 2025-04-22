@@ -1,3 +1,5 @@
+/* ------------------HERO--------------------- */
+
 /* saludo hero */
 .tracking-in-contract {
 	-webkit-animation: tracking-in-contract 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) ;
@@ -106,9 +108,87 @@
     86.1% { opacity: 1; }
     100% { opacity: 1; }
   }
+
+  /* redes y descargar cv */
+  .focus-in-1 {
+    -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  
+  .focus-in-2 {
+    -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+  }
+  
+  .focus-in-3 {
+    -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
   
 
-/* HOVER PROJECTS */
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+/* -----------------------------NAVBAR------------------------------- */
+
+.navbar-link li a {
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #865DFF,
+    #865DFF 50%,
+    #fff 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-link li a:hover {
+  background-position: 0%;
+  font-weight: 600;
+}
+
+.navbar-link li a:hover::before {
+  width: 100%;
+}
+
+.navbar-link li a.active {
+  background-position: 0%;
+  font-weight: 600;
+}
+
+/* -----------------------PROJECTS----------------------------------- */
   .project-card {
     position: relative;
     overflow: hidden;
@@ -155,13 +235,16 @@
     box-shadow: 0 25px 20px -10px rgba(0, 0, 0, 0.15);
   }
 
-  /* SKILLS */
 
-  .icon {
+    
+  /* -----------------------EFECTOS GLOBALES-------------------------- */
+
+  .hover-scale {
+    display: inline-block;
     transition: transform 0.3s ease;
   }
   
-  .icon:hover {
+  .hover-scale:hover {
     transform: scale(1.2);
   }
 

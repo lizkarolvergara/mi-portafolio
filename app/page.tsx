@@ -26,14 +26,14 @@ export default function Home() {
             <br />
             Con conocimientos en React, Next.js y Node.js, aplicando buenas prácticas de desarrollo y metodologías ágiles como Scrum. Siempre estoy explorando nuevas tecnologías y formas de optimizar el rendimiento y la usabilidad en mis proyectos. 
           </p>
-          <div  className="flex py-8 items-center gap-3 text-flicker-in-glow">
-            <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank" className="icon">
+          <div  className="flex py-8 items-center gap-3">
+            <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank" className="hover-scale focus-in-1">
               <img src="/linkedin.svg" alt="Linkedin" />
             </a>
-            <a href="https://github.com/lizkarolvergara" target="_blank"className="icon">
+            <a href="https://github.com/lizkarolvergara" target="_blank" className="hover-scale focus-in-2">
               <img src="/github.svg" alt="Github" />
             </a>
-            <a href="/cv-lizkarolvergara.pdf" download className="underline font-medium">
+            <a href="/cv-lizkarolvergara.pdf" download className="underline font-medium focus-in-3">
               Descargar CV
             </a>
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="grid grid-cols-8 gap-8">
           
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center icon">
+            <div key={index} className="flex flex-col items-center hover-scale">
               <img src={skill.src} alt={skill.alt} className=""/>
               <p>{skill.name}</p>
             </div>

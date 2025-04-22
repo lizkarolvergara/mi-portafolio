@@ -4,27 +4,27 @@ export default function Footer() {
             <div>
                 <ul className="flex justify-center gap-10 py-8">
                     <li>
-                        <a href="#hero">
+                        <a href="#hero" className="hover-scale">
                             Sobre mí
                         </a>
                     </li>
                     <li>
-                        <a href="#skills">
+                        <a href="#skills" className="hover-scale">
                             Skills
                         </a>
                     </li>
                     <li>
-                        <a href="#education">
+                        <a href="#education" className="hover-scale">
                             Formación
                         </a>
                     </li>
                     <li>
-                        <a href="#projects">
+                        <a href="#projects" className="hover-scale">
                             Proyectos
                         </a>
                     </li>
                     <li>
-                        <a href="#contact">
+                        <a href="#contact" className="hover-scale">
                             Contacto
                         </a>
                     </li>
