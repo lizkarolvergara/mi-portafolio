@@ -12,8 +12,8 @@ export default function Home() {
           <AnimatedAvatar />
         </div>
         <div className="py-10 lg:pr-20">
-            <p className="flex flex-col md:flex-row md:gap-3 text-4xl tracking-in-contract">
-              Hola, mi nombre es <span className="text-[#865DFF] font-bold lg:hidden">Liz Karol Vergara</span>
+            <p className="text-3xl tracking-in-contract">
+              Hola, mi nombre es <span className="text-[#865DFF] text-4xl font-bold lg:hidden"> <br />Liz Karol Vergara</span> 
             </p>
 
             <h1 className="text-6xl text-[#865DFF] font-bold leading-relaxed tracking-in-contract hidden lg:block">
@@ -32,10 +32,10 @@ export default function Home() {
           </p>
           <div  className="flex py-8 items-center gap-3">
             <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank" className="hover-scale focus-in-1">
-              <img src="/linkedin.svg" alt="Linkedin" />
+              <img src="/icon-linkedin.svg" alt="Linkedin" />
             </a>
             <a href="https://github.com/lizkarolvergara" target="_blank" className="hover-scale focus-in-2">
-              <img src="/github.svg" alt="Github" />
+              <img src="/icon-github.svg" alt="Github" />
             </a>
             <a href="/cv-lizkarolvergara.pdf" download className="underline font-medium focus-in-3">
               Descargar CV
@@ -138,7 +138,7 @@ export default function Home() {
 
           <div className="contact-pill group">
             <div className="icon-container">
-              <img src="/mail.svg" alt="email" className="w-[40px] h-[40px]lg:w-[50px] lg:h-[50px]"/>
+              <img src="/icon-mail.svg" alt="email" className="w-[40px] h-[40px]lg:w-[50px] lg:h-[50px]"/>
             </div>
 
             <div className="contact-info">
@@ -149,7 +149,7 @@ export default function Home() {
 
           <div className="contact-pill group">
             <div className="icon-container">
-              <img src="/whatsapp.svg" alt="whatsapp" className="w-[40px] h-[40px]lg:w-[50px] lg:h-[50px]"/>
+              <img src="/icon-whatsapp.svg" alt="whatsapp" className="w-[40px] h-[40px]lg:w-[50px] lg:h-[50px]"/>
             </div>
 
             <div className="contact-info">
