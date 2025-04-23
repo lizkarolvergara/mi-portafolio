@@ -8,7 +8,7 @@ export default function Navbar() {
     const activeId = useScrollSpy(['hero', 'skills', 'education', 'projects', 'contact'])
 
     return (
-        <nav className="sticky top-0 z-50 flex justify-end py-5 border-b border-[#865DFF]  shadow-sm px-24 text-xl bg-[#191825]/70 backdrop-blur-sm">
+        <nav className="sticky top-0 z-50 flex justify-center lg:justify-end py-5 border-b border-[#865DFF]  shadow-sm px-24 text-xl bg-[#191825]/70 backdrop-blur-sm">
             <ul className="flex gap-5 navbar-link">
                 <li>
                     <a href="#hero" className={activeId === 'hero' ? 'active' : ''}>

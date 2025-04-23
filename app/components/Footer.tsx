@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer>
             <div>
-                <ul className="flex justify-center gap-10 py-8">
+                <ul className="flex justify-center gap-10 py-8 hidden md:flex">
                     <li>
                         <a href="#hero" className="hover-scale">
                             Sobre mí

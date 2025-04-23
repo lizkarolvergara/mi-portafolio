@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react"
 export default function AnimatedAvatar () {
     const [isBlinking, setIsBlinking] = useState(false)
     const svgRef  = useRef<SVGSVGElement>(null)
+    const [isSmiling, setIsSmiling] = useState(false)
 
     useEffect (() => {
         const interval = setInterval(() => {
@@ -40,12 +41,23 @@ export default function AnimatedAvatar () {
     }, [])
 
     return (
-        <div className="relative w-[400px] h-[400px]"> 
-            <img src="/avatar-base.svg" alt="avatar"/>
-            {isBlinking ? (
+        <div 
+            className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px]" onClick={() => {
+            setIsSmiling(true)
+            setTimeout(() => setIsSmiling(false), 1000)
+        }}>
+            {!isSmiling && 
+                (
+                    <img src="/avatar-base.svg" alt="avatar"/>
+                )
+            } 
+            {isSmiling ? 
+                (
+                    <img src="/avatar-smile.svg" alt="avatar"/>
+                ) : isBlinking ? (
                     <img src="/eyes-closed.svg" className="absolute inset-0 " />
                 ) : (
-                    <svg ref={svgRef} xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none" className="absolute inset-0 pointer-events-none">
+                    <svg ref={svgRef} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" className="absolute inset-0 pointer-events-none w-full h-full">
                         <g id="eyes-open">
                             <g id="eye-right">
                                 <ellipse id="Ellipse 4" cx="8.86598" cy="13.5945" rx="8.86598" ry="13.5945" transform="matrix(-0.999396 0.0347579 0.0347579 0.999396 254.233 221.663)" fill="black"/>
@@ -59,10 +71,11 @@ export default function AnimatedAvatar () {
                             </g>
                         </g>
                     </svg>
-
-
                 )
             }
+
+
+
         </div>
     )
 }

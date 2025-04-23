@@ -35,10 +35,10 @@
   
 /* descripcion hero */
   .text-flicker-in-glow {
-    -webkit-animation: text-flicker-in-glow 2s linear both;
-    animation: text-flicker-in-glow 2s linear both;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation: text-flicker-in-glow 1s linear both;
+    animation: text-flicker-in-glow 1s linear both;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
   }
   
   @-webkit-keyframes text-flicker-in-glow {
@@ -113,31 +113,31 @@
   .focus-in-1 {
     -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
             animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    -webkit-animation-delay: 1.7s;
+            animation-delay: 1.7s;
   }
   
   .focus-in-2 {
     -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
             animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    -webkit-animation-delay: 2.5s;
-            animation-delay: 2.5s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
   }
   
   .focus-in-3 {
     -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
             animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s;
+    -webkit-animation-delay: 2.3s;
+            animation-delay: 2.3s;
   }
 
   .focus-in-4 {
     -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
             animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    -webkit-animation-delay: 3.5s;
-            animation-delay: 3.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
   }
-  
+
 
   @-webkit-keyframes text-focus-in {
     0% {
@@ -241,6 +241,55 @@
     transform: scale(1.03);
     box-shadow: 0 25px 20px -10px rgba(0, 0, 0, 0.15);
   }
+
+/* --------------------------------CONTACTO----------------------- */
+
+.contact-pill {
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 1rem;
+  border: 3px solid #FFA3FD;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+
+  /* Por defecto (mobile & tablet) */
+  width: 350px;
+}
+
+.icon-container {
+  padding-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* En escritorio: efecto hover + info oculta */
+@media (min-width: 1024px) {
+  .contact-pill {
+    width: 85px;
+  }
+
+  .contact-pill:hover {
+    width: 360px;
+  }
+
+  .contact-info {
+    opacity: 0;
+  }
+
+  .group:hover .contact-info {
+    opacity: 1;
+  }
+}
+
+
 
 
     
