@@ -262,6 +262,17 @@
     box-shadow: 0 25px 20px -10px rgba(0, 0, 0, 0.15);
   }
 
+  /* demo y repo */
+  .project-card .project-links {
+    pointer-events: none; /* no se puede hacer clic si no se ve */
+  }
+  
+  .project-card:hover .project-links {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+
 /* --------------------------------CONTACTO----------------------- */
 
 .contact-pill {
@@ -279,7 +290,7 @@
 }
 
 .icon-container {
-  padding-right: 1.25rem;
+  padding-right: 0.8rem;
   flex-shrink: 0;
 }
 
@@ -316,7 +327,7 @@
   /* -----------------------EFECTOS GLOBALES-------------------------- */
 
   .hover-scale {
-    display: inline-block;
+
     transition: transform 0.3s ease;
   }
   

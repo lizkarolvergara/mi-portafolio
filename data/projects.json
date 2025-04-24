@@ -1,20 +1,36 @@
 [
     {
-        "name": "Name Example",
-        "src": "imagen-ejemplo.png",
-        "alt": "ejemplo",
-        "skills": ["8-html.svg", "7-css.svg", "6-javascript.svg"]
+        "name": "Static Website e-commerce",
+        "src": "proj-izitech.png",
+        "alt": "izitech",
+        "skills": ["s-html.svg", "s-bootstrap.svg"],
+        "demo": "https://project-izitech.netlify.app/",
+        "repository": "https://github.com/lizkarolvergara/prototipo-izitech"
     },
     {
-        "name": "Name Example",
-        "src": "imagen-ejemplo.png",
-        "alt": "ejemplo",
-        "skills": ["5-node.svg", "9-git.svg"]
+        "name": "SPA Festival de música",
+        "src": "proj-festival.png",
+        "alt": "festival musica",
+        "skills": ["s-html.svg", "s-css.svg", "s-javascript.svg"],
+        "demo": "https://indie-festival-liz.netlify.app/",
+        "repository": "https://github.com/lizkarolvergara/festivalmusica"
     },
+
     {
-        "name": "Name Example",
-        "src": "imagen-ejemplo.png",
-        "alt": "ejemplo",
-        "skills": ["1-react.svg", "2-angular.svg", "3-nest.svg", "16-figma.svg"]
+        "name": "CRUD Biblioteca virtual",
+        "src": "proj-biblioteca.png",
+        "alt": "biblioteca",
+        "skills": ["s-html.svg", "s-bootstrap.svg", "s-typescript.svg", "s-angular.svg"],
+        "demo": "https://crud-biblioteca-liz.netlify.app/",
+        "repository": "https://github.com/lizkarolvergara/bibliotecavirtual"
+    },
+
+    {
+        "name": "CRUD Galería de videos",
+        "src": "proj-aluraflix.png",
+        "alt": "alura-flix",
+        "skills": ["s-html.svg", "s-bootstrap.svg", "s-javascript.svg", "s-react.svg"],
+        "demo": "https://aluraflix-project.netlify.app/",
+        "repository": "https://github.com/lizkarolvergara/aluraflix"
     }
 ]

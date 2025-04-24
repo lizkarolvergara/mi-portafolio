@@ -1,96 +1,100 @@
 [
     { 
-        "src": "1-react.svg", 
+        "src": "/s-react.svg", 
         "alt": "React", 
         "name": "React.js" 
     },
 
     { 
-        "src": "/2-angular.svg", 
+        "src": "/s-angular.svg", 
         "alt": "Angular", 
         "name": "Angular" 
     },
 
     { 
-        "src": "/3-nest.svg", 
+        "src": "/s-nest.svg", 
         "alt": "Nest.js", 
         "name": "Nest.js" 
     },
 
     { 
-        "src": "/4-next.svg", 
+        "src": "/s-next.svg", 
         "alt": "Next.js", 
         "name": "Next.js" 
     },
 
     { 
-        "src": "/5-node.svg", 
+        "src": "/s-node.svg", 
         "alt": "Node.js", 
         "name": "Node.js" 
     },
 
     { 
-        "src": "/6-javascript.svg", 
+        "src": "/s-javascript.svg", 
         "alt": "JavaScript", 
         "name": "JavaScript" 
     },
 
     { 
-        "src": "/7-css.svg", 
-        "alt": "CSS3", 
-        "name": "CSS3" 
+        "src": "/s-typescript.svg", 
+        "alt": "Typescript", 
+        "name": "Typescript" 
     },
 
     { 
-        "src": "/8-html.svg", 
+        "src": "/s-html.svg", 
         "alt": "HTML5", 
         "name": "HTML5" 
     },
 
     { 
-        "src": "/9-git.svg", 
-        "alt": "Git", 
-        "name": "Git" 
+        "src": "/s-css.svg", 
+        "alt": "CSS3", 
+        "name": "CSS3" 
     },
 
     { 
-        "src": "/10-github.svg", 
-        "alt": "GitHub", 
-        "name": "GitHub" 
-    },
-
-    { 
-        "src": "/11-sql.svg", 
-        "alt": "SQL", 
-        "name": "SQL" 
-    },
-
-    { 
-        "src": "/12-docker.svg", 
-        "alt": "Docker", 
-        "name": "Docker" 
-    },
-
-    { 
-        "src": "/13-postman.svg", 
-        "alt": "Postman", 
-        "name": "Postman" 
-    },
-
-    { 
-        "src": "/14-bootstrap.svg", 
+        "src": "/s-bootstrap.svg", 
         "alt": "Bootstrap", 
         "name": "Bootstrap" 
     },
 
     { 
-        "src": "/15-tailwind.svg", 
+        "src": "/s-tailwind.svg", 
         "alt": "Tailwind CSS", 
         "name": "Tailwind" 
     },
 
     { 
-        "src": "/16-figma.svg", 
+        "src": "/s-git.svg", 
+        "alt": "Git", 
+        "name": "Git" 
+    },
+
+    { 
+        "src": "/s-github.svg", 
+        "alt": "GitHub", 
+        "name": "GitHub" 
+    },
+
+    { 
+        "src": "/s-sql.svg", 
+        "alt": "SQL", 
+        "name": "SQL" 
+    },
+
+    { 
+        "src": "/s-docker.svg", 
+        "alt": "Docker", 
+        "name": "Docker" 
+    },
+
+
+
+
+
+    { 
+        "src": "/s-figma.svg", 
         "alt": "Figma", 
         "name": "Figma" 
     }

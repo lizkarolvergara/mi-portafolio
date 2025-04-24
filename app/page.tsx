@@ -1,9 +1,15 @@
+'use client'
 import skills from "@/data/skills.json"
 import projects from "@/data/projects.json"
 import education from "@/data/education.json"
 import AnimatedAvatar from "./components/AnimatedAvatar";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <768;
+
   return (
     <main className="px-6 md:px-12 lg:px-24">
 
@@ -13,14 +19,14 @@ export default function Home() {
         </div>
         <div className="py-10 lg:pr-20">
             <p className="text-3xl tracking-in-contract">
-              Hola, mi nombre es <span className="text-[#865DFF] text-4xl font-bold lg:hidden"> <br />Liz Karol Vergara</span> 
+              Hola, mi nombre es <span className="text-[#865DFF] font-bold lg:hidden"> <br />Liz Karol Vergara</span> 
             </p>
 
             <h1 className="text-6xl text-[#865DFF] font-bold leading-relaxed tracking-in-contract hidden lg:block">
               Liz Karol Vergara
             </h1>
 
-          <p className="text-2xl font-bold tracking-in-contract md:text-3xl lg:text-4xl">
+          <p className="text-2xl lg:font-bold tracking-in-contract md:text-3xl lg:text-4xl">
             y desarrollo páginas web <span className="text-[#FFA3FD]">.</span>
           </p>
 
@@ -55,9 +61,9 @@ export default function Home() {
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-8">
           
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col hover-scale">
+            <div key={index} className="flex flex-col  hover-scale">
               <img src={skill.src} alt={skill.alt} className="mx-auto "/>
-              <p className="text-center">{skill.name}</p>
+              <p className="text-center mt-auto">{skill.name}</p>
             </div>
           ))}
         
@@ -104,16 +110,50 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 justify-items-center py-6">
 
           {projects.map((project, index) => (
-            <div key={index} className="project-card flex flex-col rounded-xl border-2 border-[#FFA3FD]">
+            <div key={index} className="project-card flex flex-col rounded-xl border-2 border-[#FFA3FD]" onClick={() => {
+              if (isMobile) {
+                if (activeCard === index) {
+                  setActiveCard(null)
+                } else {
+                  setActiveCard(index);
+                }
+              }
+            }}>
               
               <div>
                 <p className="text-center py-2">{project.name}</p>
               </div>
   
-              <div>
-                <a href="">
-                  <img src={project.src} alt={project.alt} className="project-img p-1"/>
-                </a>
+              <div className="relative">
+                <img src={project.src} alt={project.alt} className="project-img p-1"/>
+
+                <div className="project-links absolute inset-0 flex items-center justify-center gap-2  opacity-0 transition-opacity duration-300 ${activeCard === index || !isMobile ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'">
+
+                  <a href={project.demo} target="_blank" 
+                    onClick={(e) => {
+                      if (isMobile && activeCard !== index) {
+                        e.preventDefault();
+                        setActiveCard(index);
+                      }
+                    }} 
+                    className="flex justify-center items-center py-2 px-4 transition-all duration-300 hover:font-bold ">
+                    <img src="/icon-demo.svg" className=" w-[20px] h-[20px]" />
+                    Demo
+                  </a>
+
+                  <a href={project.repository} target="_blank" 
+                    onClick={(e) => {
+                      if (isMobile && activeCard !== index) {
+                        e.preventDefault();
+                        setActiveCard(index);
+                      }
+                    }} 
+                    className="flex justify-center items-center py-2 px-4 transition-all duration-300 hover:font-bold ">
+                    <img src="/icon-github.svg" className="px-1 w-[25px] h-[25px]" />
+                    Repo
+                  </a>
+
+                </div>
               </div>
   
               <div className="flex py-2 justify-center gap-2">
@@ -138,7 +178,7 @@ export default function Home() {
 
           <div className="contact-pill group">
             <div className="icon-container">
-              <img src="/icon-mail.svg" alt="email" className="w-[40px] h-[40px]lg:w-[50px] lg:h-[50px]"/>
+              <img src="/icon-mail.svg" alt="email" />
             </div>
 
             <div className="contact-info">
@@ -149,7 +189,7 @@ export default function Home() {
 
           <div className="contact-pill group">
             <div className="icon-container">
-              <img src="/icon-whatsapp.svg" alt="whatsapp" className="w-[40px] h-[40px]lg:w-[50px] lg:h-[50px]"/>
+              <img src="/icon-whatsapp.svg" alt="whatsapp" />
             </div>
 
             <div className="contact-info">
