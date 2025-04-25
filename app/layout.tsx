@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className={`${jost.variable} font-[family-name:var(--font-jost)] antialiased dark:bg-[#191825] dark:text-white text-lg scroll-smooth`}>
       <body 
-        className={`${jost.variable} font-[family-name:var(--font-jost)] antialiased dark:bg-[#191825] dark:text-white text-lg`}
+        
       >
         <Providers>
             <Navbar />
