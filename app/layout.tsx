@@ -26,16 +26,14 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body 
-        className={`${jost.variable} font-[family-name:var(--font-jost)] antialiased`}
+        className={`${jost.variable} font-[family-name:var(--font-jost)] antialiased dark:bg-[#191825] dark:text-white text-lg`}
       >
         <Providers>
-          <div className="light:bg-white dark:bg-[#191825] light:text-[#191825] dark:text-white text-lg">
             <Navbar />
             
             {children}
 
             <Footer />
-          </div>
 
         </Providers>
       </body>
