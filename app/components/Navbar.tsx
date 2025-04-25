@@ -1,7 +1,7 @@
 'use client';
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { Disclosure } from "@headlessui/react";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 
@@ -40,9 +40,16 @@ export default function Navbar() {
         }
     }, [])
 
-
+    // Toggle dark-light
     const { theme, setTheme } = useTheme();
 
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+    setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <Disclosure as="nav" className="sticky top-0 h-[68px] z-50 bg-opacity-70 dark:bg-[#191825] dark:bg-opacity-70 backdrop-blur-sm border-b border-[#865DFF] shadow-sm text-xl  md:px-12 lg:px-24 md:flex md:justify-center lg:justify-end py-5">
