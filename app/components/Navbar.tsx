@@ -78,7 +78,7 @@ export default function Navbar() {
 
                     
                     <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="pl-6 md:pl-5 ">
-                        {theme === 'dark' ? <img src="/m-light.svg" alt="mode"/> : <img src="/m-dark.svg" alt="mode"/>}
+                        {theme === 'dark' ? <img src="/m-light.svg" alt="mode" className="w-[20px] h-[20px]"/> : <img src="/m-dark.svg" alt="mode" className="w-[20px] h-[20px]"/>}
                         
                     </button>
         
