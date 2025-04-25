@@ -38,10 +38,10 @@ export default function Home() {
           </p>
           <div  className="flex py-8 items-center gap-3">
             <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank" className="hover-scale focus-in-1">
-              <img src="/icon-linkedin.svg" alt="Linkedin" />
+              <img src="/icon-linkedin.svg" alt="Linkedin" className="icon-svg"/>
             </a>
             <a href="https://github.com/lizkarolvergara" target="_blank" className="hover-scale focus-in-2">
-              <img src="/icon-github.svg" alt="Github" />
+              <img src="/icon-github.svg" alt="Github" className="icon-svg"/>
             </a>
             <a href="/cv-lizkarolvergara.pdf" download className="underline font-medium focus-in-3">
               Descargar CV
@@ -62,7 +62,7 @@ export default function Home() {
           
           {skills.map((skill, index) => (
             <div key={index} className="flex flex-col  hover-scale">
-              <img src={skill.src} alt={skill.alt} className="mx-auto "/>
+              <img src={skill.src} alt={skill.alt} className="mx-auto icon-svg"/>
               <p className="text-center mt-auto">{skill.name}</p>
             </div>
           ))}
@@ -178,7 +178,7 @@ export default function Home() {
 
           <div className="contact-pill group">
             <div className="icon-container">
-              <img src="/icon-mail.svg" alt="email" />
+              <img src="/icon-mail.svg" alt="email" className="icon-svg"/>
             </div>
 
             <div className="contact-info">
@@ -189,7 +189,7 @@ export default function Home() {
 
           <div className="contact-pill group">
             <div className="icon-container">
-              <img src="/icon-whatsapp.svg" alt="whatsapp" />
+              <img src="/icon-whatsapp.svg" alt="whatsapp" className="icon-svg"/>
             </div>
 
             <div className="contact-info">

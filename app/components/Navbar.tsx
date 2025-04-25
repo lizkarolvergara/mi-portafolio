@@ -2,7 +2,7 @@
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { Disclosure } from "@headlessui/react";
 import { useRef, useEffect } from "react";
-
+import { useTheme } from "next-themes";
 
 
 export default function Navbar() {
@@ -16,10 +16,10 @@ export default function Navbar() {
         { id: 'projects', label: 'Proyectos' },
         { id: 'contact', label: 'Contacto' }
     ]
+
     
     const panelRef = useRef<HTMLDivElement | null>(null);
     const buttonRef = useRef<HTMLButtonElement | null>(null);
-
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -40,21 +40,26 @@ export default function Navbar() {
         }
     }, [])
 
+
+    const { theme, setTheme } = useTheme();
+
+
     return (
-        <Disclosure as="nav" className="sticky top-0 h-[68px] z-50 bg-[#191825]/70 backdrop-blur-sm border-b border-[#865DFF] shadow-sm text-xl  md:px-12 lg:px-24 md:flex md:justify-center lg:justify-end py-5">
+        <Disclosure as="nav" className="sticky top-0 h-[68px] z-50 bg-opacity-70 dark:bg-[#191825] dark:bg-opacity-70 backdrop-blur-sm border-b border-[#865DFF] shadow-sm text-xl  md:px-12 lg:px-24 md:flex md:justify-center lg:justify-end py-5">
+
             
             {({ open, close }) => (
                 <>
-                    <Disclosure.Button ref={buttonRef} className="md:hidden absolute right-6 top-6 z-50">
+                    <Disclosure.Button ref={buttonRef} className="md:hidden absolute right-6 top-6 z-50 ">
                         {open ? (
-                            <img src="/icon-close.svg" alt="close menu" />
+                            <img src="/icon-close.svg" alt="close menu" className="icon-svg"/>
                         ) : (
-                            <img src="/icon-hamburguer.svg" alt="open menu" />
+                            <img src="/icon-hamburguer.svg" alt="open menu" className="icon-svg"/>
                         )}
                         
                     </Disclosure.Button>
                     
-                    <ul className="hidden md:flex gap-5 navbar-link">
+                    <ul className={`${theme === 'dark' ? 'navbar-link-dark' : 'navbar-link'} hidden md:flex gap-5`}>
                         {menuItems.map(item =>(
                             <li key={item.id}>
                                 <a href={`#${item.id}`} className={activeId === item.id ? 'active' : ''} >
@@ -63,10 +68,16 @@ export default function Navbar() {
                             </li>
                         ))}
                     </ul>
+
+                    
+                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="pl-6 md:pl-5 ">
+                        {theme === 'dark' ? <img src="/m-light.svg" alt="mode"/> : <img src="/m-dark.svg" alt="mode"/>}
+                        
+                    </button>
         
                     <Disclosure.Panel>
 
-                        <div ref={panelRef} className="md:hidden flex flex-col bg-[#191825]/95 gap-4 absolute top-[68px] w-full text-center py-4 animate-fade-slide-down">
+                        <div ref={panelRef} className={`md:hidden flex flex-col gap-4 absolute top-[68px] w-full text-center py-4 animate-fade-slide-down ${ theme === 'dark' ? 'panel-bg-dark' : 'panel-bg-light' }`}>
                             {menuItems.map(item => (
                                 <a key={item.id} href={`#${item.id}`} onClick={() => close()} className={` ${activeId === item.id ? 'text-[#865DFF] font-bold' : ''}`}>
                                     {item.label}

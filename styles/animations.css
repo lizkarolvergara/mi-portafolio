@@ -1,3 +1,10 @@
+ /* ---------------------TRANSICIÓN CAMBIO MODO CLARO-OSCURO--------------------------- */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease, filter 0.4s ease;
+}
+
+
+
 /* ------------------HERO--------------------- */
 
 /* saludo hero */
@@ -164,6 +171,7 @@
     }
   }
   
+  
 /* -----------------------------NAVBAR------------------------------- */
 
 .navbar-link li a {
@@ -174,7 +182,7 @@
     to right,
     #865DFF,
     #865DFF 50%,
-    #fff 50%
+    #000 50%
   );
   background-size: 200% 100%;
   background-position: -100%;
@@ -191,6 +199,40 @@
 }
 
 .navbar-link li a.active {
+  background-position: 0%;
+  font-weight: 600;
+}
+/* lo mismo pero para modo oscuro */
+.navbar-link-dark li a.active {
+  background-position: 0%;
+  font-weight: 600;
+}
+
+.navbar-link-dark li a {
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #865DFF,
+    #865DFF 50%,
+    #fff 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-link-dark li a:hover {
+  background-position: 0%;
+  font-weight: 600;
+}
+
+.navbar-link-dark li a:hover::before {
+  width: 100%;
+}
+
+.navbar-link-dark li a.active {
   background-position: 0%;
   font-weight: 600;
 }
@@ -212,6 +254,16 @@
     animation: fade-slide-down 0.4s ease-out both;
   }
 }
+
+/* cambio del fondo cuando se abre panel en modo mobile */
+.panel-bg-light {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.panel-bg-dark {
+  background-color: rgba(25, 24, 37, 0.7);
+}
+
 
 
 
@@ -335,4 +387,16 @@
     transform: scale(1.2);
   }
 
-  
+/* -------------ICONOS MODO DARKS----------------- */
+
+
+:root img.icon-svg {
+  filter: invert(1) brightness(1.6); 
+}
+
+.dark img.icon-svg {
+  filter: invert(0); 
+}
+
+
+

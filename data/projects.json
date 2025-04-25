@@ -29,7 +29,7 @@
         "name": "CRUD Galería de videos",
         "src": "proj-aluraflix.png",
         "alt": "alura-flix",
-        "skills": ["s-html.svg", "s-bootstrap.svg", "s-javascript.svg", "s-react.svg"],
+        "skills": ["s-html.svg", "s-bootstrap.svg", "s-javascript.svg", "s-react.svg", "s-docker.svg"],
         "demo": "https://aluraflix-project.netlify.app/",
         "repository": "https://github.com/lizkarolvergara/aluraflix"
     }

@@ -4,6 +4,7 @@ import "/styles/globals.css";
 import "/styles/animations.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Providers } from "./providers";
 
 const jost = Jost({
   variable: "--font-jost",
@@ -25,14 +26,18 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body 
-        className={`${jost.variable} font-[family-name:var(--font-jost)] antialiased bg-[#191825] text-white text-lg`}
+        className={`${jost.variable} font-[family-name:var(--font-jost)] antialiased`}
       >
+        <Providers>
+          <div className="light:bg-white dark:bg-[#191825] light:text-[#191825] dark:text-white text-lg">
+            <Navbar />
+            
+            {children}
 
-        <Navbar />
-        
-        {children}
+            <Footer />
+          </div>
 
-        <Footer />
+        </Providers>
       </body>
     </html>
   );
