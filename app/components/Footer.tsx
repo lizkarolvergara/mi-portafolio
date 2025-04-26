@@ -40,6 +40,7 @@ export default function Footer() {
             </div>
 
             <p className="flex justify-center py-2">© Liz Karol Vergara, Tarapoto, Perú</p>
+       
         </footer>
     )
 }

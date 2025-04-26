@@ -34,7 +34,7 @@ export default function Home() {
             <br />            
             Actualmente estudiante de Desarrollo de Sistemas Front-end y Back-end en el instituto IDAT. Me interesa crear interfaces limpias, accesibles y funcionales, combinando diseño y tecnología para mejorar la experiencia del usuario. <br />
             <br />
-            Con conocimientos en React, Next.js y Node.js, aplicando buenas prácticas de desarrollo y metodologías ágiles como Scrum. Siempre estoy explorando nuevas tecnologías y formas de optimizar el rendimiento y la usabilidad en mis proyectos. 
+            Con conocimientos en React, Angular y Node, aplicando buenas prácticas de desarrollo y metodologías ágiles como Scrum. Siempre estoy explorando nuevas tecnologías y formas de optimizar el rendimiento y la usabilidad en mis proyectos. 
           </p>
           <div  className="flex py-8 items-center gap-3">
             <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank" className="hover-scale focus-in-1">
@@ -76,7 +76,10 @@ export default function Home() {
 
         <div>
           {education.map((education, index) => (
-            <div key={index} className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] before:bg-[#1e1b2e]
+            <div key={index} 
+              // circulo de items y lineas rosa(timeline)
+              className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] before:bg-white dark:before:bg-[#1e1b2e]
+              
               after:content-[''] after:absolute after:top-5 after:-left-[0.09rem] after:h-full after:w-[2px] after:bg-[#E384FF] after:opacity-50 last:after:hidden">
               <h3 className="pb-2">
                 {education.name}
@@ -137,7 +140,7 @@ export default function Home() {
                       }
                     }} 
                     className="flex justify-center items-center py-2 px-4 transition-all duration-300 hover:font-bold ">
-                    <img src="/icon-demo.svg" className=" w-[20px] h-[20px]" />
+                    <img src="/icon-demo.svg" className=" w-[20px] h-[20px] icon-svg" />
                     Demo
                   </a>
 
@@ -149,7 +152,7 @@ export default function Home() {
                       }
                     }} 
                     className="flex justify-center items-center py-2 px-4 transition-all duration-300 hover:font-bold ">
-                    <img src="/icon-github.svg" className="px-1 w-[25px] h-[25px]" />
+                    <img src="/icon-github.svg" className="px-1 w-[25px] h-[25px] icon-svg" />
                     Repo
                   </a>
 
@@ -158,7 +161,7 @@ export default function Home() {
   
               <div className="flex py-2 justify-center gap-2">
                 {project.skills.map((skill, i) => 
-                  <img key={i} src={skill} className="w-8 h-8"/>
+                  <img key={i} src={skill} className="w-8 h-8 icon-svg"/>
                 )}              
               </div>
   

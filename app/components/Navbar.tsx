@@ -9,13 +9,13 @@ export default function Navbar() {
 
     const activeId = useScrollSpy(['hero', 'skills', 'education', 'projects', 'contact'])
 
-    const menuItems = [
+    const menuItems = [ 
         { id: 'hero', label: 'Sobre mí' },
         { id: 'skills', label: 'Skills' },
         { id: 'education', label: 'Formación' },
         { id: 'projects', label: 'Proyectos' },
         { id: 'contact', label: 'Contacto' }
-    ]
+    ] //solo usable para el modo md y lg
 
     
     const panelRef = useRef<HTMLDivElement | null>(null);
@@ -57,6 +57,7 @@ export default function Navbar() {
             
             {({ open, close }) => (
                 <>
+                    {/* botón hamburguesa */}
                     <Disclosure.Button ref={buttonRef} className="md:hidden absolute right-6 top-6 z-50 ">
                         {open ? (
                             <img src="/icon-close.svg" alt="close menu" className="icon-svg"/>
@@ -65,7 +66,8 @@ export default function Navbar() {
                         )}
                         
                     </Disclosure.Button>
-                    
+
+                    {/* opciones del navbar solo en modo md y lg */}
                     <ul className={`${theme === 'dark' ? 'navbar-link-dark' : 'navbar-link'} hidden md:flex gap-5`}>
                         {menuItems.map(item =>(
                             <li key={item.id}>
@@ -76,12 +78,14 @@ export default function Navbar() {
                         ))}
                     </ul>
 
-                    
-                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="pl-6 md:pl-5 cursor-pointer">
+                    {/* botón modo dark-light */}
+                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="pl-6 pt-1 md:pl-5 cursor-pointer">
                         {theme === 'dark' ? <img src="/m-light.svg" alt="mode"/> : <img src="/m-dark.svg" alt="mode"/>}
                         
                     </button>
-        
+                    
+
+                    {/* opciones del navbar del boton hamburguesa */}
                     <Disclosure.Panel>
 
                         <div ref={panelRef} className={`md:hidden flex flex-col gap-4 absolute top-[68px] w-full text-center py-4 animate-fade-slide-down ${ theme === 'dark' ? 'panel-bg-dark' : 'panel-bg-light' }`}>
