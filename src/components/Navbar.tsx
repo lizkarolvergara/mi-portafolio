@@ -3,19 +3,27 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { Disclosure } from "@headlessui/react";
 import { useRef, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { Link } from "@/src/i18n/navigation";
+import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 
 export default function Navbar() {
 
+    //traducciones
+    const t = useTranslations('navbar')
+
+    //scroll
     const activeId = useScrollSpy(['hero', 'skills', 'education', 'projects', 'contact'])
 
+
     const menuItems = [ 
-        { id: 'hero', label: 'Sobre mí' },
-        { id: 'skills', label: 'Skills' },
-        { id: 'education', label: 'Formación' },
-        { id: 'projects', label: 'Proyectos' },
-        { id: 'contact', label: 'Contacto' }
-    ] //solo usable para el modo md y lg
+        { id: 'hero', label: t('about') },
+        { id: 'skills', label: t('skills') },
+        { id: 'education', label: t('education') },
+        { id: 'projects', label: t('projects') },
+        { id: 'contact', label: t('contact') }
+      ]; //solo usable para el modo md y lg
 
     
     const panelRef = useRef<HTMLDivElement | null>(null);
@@ -51,6 +59,10 @@ export default function Navbar() {
 
     if (!mounted) return null;
 
+    //toggle inglés-español
+    const locale = useLocale();
+
+
     return (
         <Disclosure as="nav" className="sticky top-0 h-[68px] z-50 bg-opacity-70  dark:bg-opacity-70 backdrop-blur-sm border-b border-[#865DFF] shadow-sm text-xl  md:px-12 lg:px-24 md:flex md:justify-center lg:justify-end py-5">
 
@@ -68,7 +80,7 @@ export default function Navbar() {
                     </Disclosure.Button>
 
                     {/* opciones del navbar solo en modo md y lg */}
-                    <ul className={`${theme === 'dark' ? 'navbar-link-dark' : 'navbar-link'} hidden md:flex gap-5`}>
+                    <ul className={`${theme === 'dark' ? 'navbar-link-dark' : 'navbar-link'} hidden md:flex gap-5 md:pr-5`}>
                         {menuItems.map(item =>(
                             <li key={item.id}>
                                 <a href={`#${item.id}`} className={activeId === item.id ? 'active' : ''} >
@@ -78,12 +90,29 @@ export default function Navbar() {
                         ))}
                     </ul>
 
-                    {/* botón modo dark-light */}
-                    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="pl-6 pt-1 md:pl-5 cursor-pointer">
-                        {theme === 'dark' ? <img src="/m-light.svg" alt="mode"/> : <img src="/m-dark.svg" alt="mode"/>}
-                        
-                    </button>
-                    
+
+
+                    <div className="absolute left-4 md:left-auto md:right-6 flex flex-row-reverse md:flex-row">
+
+                        {/* botón para cambiar idioma */}
+                        <div className="pl-6">
+                            {locale === 'es' ? (
+                                <Link href="/" locale="en" >
+                                EN
+                                </Link>
+                            ) : (
+                                <Link href="/" locale="es" >
+                                ES
+                                </Link>
+                            )}
+                        </div>
+                        {/* botón modo dark-light */}
+                        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="pl-[10px]  md:pl-5 cursor-pointer">
+                            {theme === 'dark' ? <img src="/m-light.svg" alt="mode"/> : <img src="/m-dark.svg" alt="mode"/>}
+                            
+                        </button>
+
+                    </div>                   
 
                     {/* opciones del navbar del boton hamburguesa */}
                     <Disclosure.Panel>

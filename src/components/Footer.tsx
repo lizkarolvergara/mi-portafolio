@@ -1,31 +1,37 @@
+import { useTranslations } from "next-intl";
+
 export default function Footer() {
+
+    //traducciones
+    const t = useTranslations('navbar')
+
     return (
         <footer>
             <div>
                 <ul className="flex justify-center gap-10 py-8 hidden md:flex">
                     <li>
                         <a href="#hero" className="hover-scale">
-                            Sobre mí
+                            {t('about')}
                         </a>
                     </li>
                     <li>
                         <a href="#skills" className="hover-scale">
-                            Skills
+                            {t('skills')}
                         </a>
                     </li>
                     <li>
                         <a href="#education" className="hover-scale">
-                            Formación
+                            {t('education')}
                         </a>
                     </li>
                     <li>
                         <a href="#projects" className="hover-scale">
-                            Proyectos
+                            {t('projects')}
                         </a>
                     </li>
                     <li>
                         <a href="#contact" className="hover-scale">
-                            Contacto
+                            {t('contact')}
                         </a>
                     </li>
                 </ul>

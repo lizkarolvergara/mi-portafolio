@@ -1,0 +1,57 @@
+{
+    "navbar": {
+        "about": "About me",
+        "skills": "Skills",
+        "education": "Education",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+
+    "hero": {
+        "greeting": "Hello, my name is",
+        "subtitle": "and I develop web pages",
+        "description-1": "Currently a student of Front-end and Back-end Systems Development at IDAT Institute. I am passionate about creating clean, accessible, and functional interfaces by combining design and technology to enhance user experience.",
+        "description-2": "With knowledge in React, Angular, and Node, applying best development practices and agile methodologies like Scrum. I am always exploring new technologies and ways to optimize performance and usability in my projects.",
+        "download": "Download CV"
+    },
+    
+    "skills": {
+        "title": "Skills"
+    },
+    
+    "education": {
+        "title": "Education",
+        "items": [
+            {
+                "name": "Oracle Next Education Front-end Program",
+                "date": "April 2024 - January 2025",
+                "description": "Front-End Development with React and JavaScript: component creation, navigation, styling with Styled Components, Hooks, and API consumption. Training in HTML, responsive CSS, Typescript, DOM manipulation, and AI integration with ChatGPT and GitHub Copilot. Complemented by Personal Development and Professional Leadership training, focusing on productivity, habit management, LinkedIn profile optimization, agile fundamentals, and entrepreneurship.",
+                "src": "icon-alura-latam.svg",
+                "alt": "alura-latam"
+            },
+            {
+                "name": "IDAT Higher Education Institute",
+                "date": "January 2024 - Present",
+                "description": "Training in structured and object-oriented programming, web development, interface design, and relational and non-relational databases. Instruction in design patterns, software quality, cybersecurity, DevOps, and IT auditing. Emphasis on agile methodologies, cloud computing, digital transformation, and artificial intelligence. Development of applied projects in business software, data, business, and view layer integration, and the creation of mobile and cloud applications.",
+                "src": "icon-idat.svg",
+                "alt": "idat"
+            },
+            {
+                "name": "Civil Engineering - National University of San Martín",
+                "date": "March 2012 - December 2016",
+                "description": "",
+                "src": "",
+                "alt": ""
+            }
+        ]
+    },
+    
+    "projects": {
+        "title": "Projects"
+    },
+    
+    "contact": {
+        "title": "Let's Talk",
+        "message": "Send message"
+    }
+}

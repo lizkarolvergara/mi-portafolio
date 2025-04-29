@@ -1,0 +1,57 @@
+{
+    "navbar": {
+        "about": "Sobre mí",
+        "skills": "Skills",
+        "education": "Formación",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+
+    "hero": {
+            "greeting": "Hola, mi nombre es",
+            "subtitle": "y desarrollo páginas web",
+            "description-1": "Actualmente estudiante de Desarrollo de Sistemas Front-end y Back-end en el instituto IDAT. Me interesa crear interfaces limpias, accesibles y funcionales, combinando diseño y tecnología para mejorar la experiencia del usuario.",
+            "description-2": "Con conocimientos en React, Angular y Node, aplicando buenas prácticas de desarrollo y metodologías ágiles como Scrum. Siempre estoy explorando nuevas tecnologías y formas de optimizar el rendimiento y la usabilidad en mis proyectos",
+            "download": "Descargar CV"
+        },
+    
+    "skills": {
+            "title": "Skills"
+        },
+    
+    "education": {
+            "title": "Formación",
+            "items": [
+                {
+                    "name": "Programa Oracle Next Education Front-end",
+                    "date": "Abril 2024 - Enero 2025",
+                    "description": "Desarrollo Front-End con React y JavaScript: creación de componentes, navegación, estilos con Styled Components, Hooks y consumo de APIs. Capacitación en HTML, CSS responsivo, Typescript, manipulación del DOM e integración de IA con ChatGPT y GitHub Copilot. Complementado con formación en Desarrollo Personal y Protagonismo Profesional, enfocada en productividad, gestión de hábitos, optimización del perfil en LinkedIn, fundamentos ágiles y emprendimiento.",
+                    "src": "icon-alura-latam.svg",
+                    "alt": "alura-latam"
+                },
+                {
+                    "name": "Escuela de Educación Superior Tecnológica IDAT",
+                    "date": "Enero 2024 - Actualmente",
+                    "description": "Formación en programación estructurada y orientada a objetos, desarrollo web, diseño de interfaces y bases de datos relacionales y no relacionales. Capacitación en patrones de diseño, calidad de software, ciberseguridad, DevOps y auditoría de TI. Enfoque en metodologías ágiles, computación en la nube, transformación digital e inteligencia artificial. Desarrollo de proyectos aplicados en software empresarial, integración de capas de datos, negocio y vista, y creación de aplicaciones móviles y en la nube.",
+                    "src": "icon-idat.svg",
+                    "alt": "idat"
+                },
+                {
+                    "name": "Ingeniería Civil - Universidad Nacional de San Martín",
+                    "date": "Marzo 2012 - Diciembre 2016",
+                    "description": "",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        },
+    
+    "projects": {
+            "title": "Proyectos"
+        },
+    
+    "contact": {
+            "title": "Hablemos",
+            "message": "Enviar mensaje"
+        }
+}

@@ -1,14 +1,25 @@
 'use client'
 import skills from "@/data/skills.json"
 import projects from "@/data/projects.json"
-import education from "@/data/education.json"
-import AnimatedAvatar from "./components/AnimatedAvatar";
+import AnimatedAvatar from "../../components/AnimatedAvatar";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/src/i18n/navigation";
+
 
 export default function Home() {
 
+  // scroll
   const [activeCard, setActiveCard] = useState<number | null>(null);
   const isMobile = typeof window !== 'undefined' && window.innerWidth <768;
+
+  // traducciones
+  const tHero = useTranslations('hero');
+  const tSkills = useTranslations('skills');
+  const tProjects = useTranslations('projects');
+  const tEducation = useTranslations('education');
+  const tContact = useTranslations('contact');
+
 
   return (
     <main className="px-6 md:px-12 lg:px-24">
@@ -19,7 +30,7 @@ export default function Home() {
         </div>
         <div className="py-10 lg:pr-20">
             <p className="text-3xl tracking-in-contract">
-              Hola, mi nombre es <span className="text-[#865DFF] font-bold lg:hidden"> <br />Liz Karol Vergara</span> 
+              {tHero('greeting')} <span className="text-[#865DFF] font-bold lg:hidden"> <br />Liz Karol Vergara</span> 
             </p>
 
             <h1 className="text-6xl text-[#865DFF] font-bold leading-relaxed tracking-in-contract hidden lg:block">
@@ -27,14 +38,14 @@ export default function Home() {
             </h1>
 
           <p className="text-2xl lg:font-bold tracking-in-contract md:text-3xl lg:text-4xl">
-            y desarrollo páginas web <span className="text-[#FFA3FD]">.</span>
+          {tHero('subtitle')} <span className="text-[#FFA3FD]">.</span>
           </p>
 
           <p className="text-flicker-in-glow text-justify lg:text-left">
             <br />            
-            Actualmente estudiante de Desarrollo de Sistemas Front-end y Back-end en el instituto IDAT. Me interesa crear interfaces limpias, accesibles y funcionales, combinando diseño y tecnología para mejorar la experiencia del usuario. <br />
+            {tHero('description-1')}<br />
             <br />
-            Con conocimientos en React, Angular y Node, aplicando buenas prácticas de desarrollo y metodologías ágiles como Scrum. Siempre estoy explorando nuevas tecnologías y formas de optimizar el rendimiento y la usabilidad en mis proyectos. 
+            {tHero('description-2')} 
           </p>
           <div  className="flex py-8 items-center gap-3">
             <a href="https://www.linkedin.com/in/lizkarolvergara/" target="_blank" className="hover-scale focus-in-1">
@@ -44,7 +55,7 @@ export default function Home() {
               <img src="/icon-github.svg" alt="Github" className="icon-svg"/>
             </a>
             <a href="/cv-lizkarolvergara.pdf" download className="underline font-medium focus-in-3">
-              Descargar CV
+            {tHero('download')}
             </a>
           </div>
 
@@ -56,7 +67,7 @@ export default function Home() {
 
       <section id="skills" className="py-5">
 
-        <h2>Skills</h2>
+        <h2>{tSkills('title')}</h2>
 
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-8">
           
@@ -72,42 +83,46 @@ export default function Home() {
       </section>
 
       <section id="education" className="py-5">
-        <h2>Formación</h2>
+        <h2>{tEducation('title')}</h2>
 
         <div>
-          {education.map((education, index) => (
-            <div key={index} 
-              // circulo de items y lineas rosa(timeline)
-              className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] before:bg-white dark:before:bg-[#1e1b2e]
-              
-              after:content-[''] after:absolute after:top-5 after:-left-[0.09rem] after:h-full after:w-[2px] after:bg-[#E384FF] after:opacity-50 last:after:hidden">
+          {[0, 1, 2].map((index) => (
+            <div
+              key={index}
+              className="pl-6 pb-8 relative before:content-[''] before:absolute before:-left-[0.55rem] before:top-1 before:w-4 before:h-4 before:rounded-full before:border-4 before:border-[#FFA3FD] item
+
+              after:content-[''] after:absolute after:top-5 after:-left-[0.09rem] after:h-full after:w-[2px] after:bg-[#E384FF] after:opacity-50 last:after:hidden"
+            >
               <h3 className="pb-2">
-                {education.name}
+                {tEducation(`items.${index}.name`)}
               </h3>
+
               <p className="pb-2">
-                {education.date}
+                {tEducation(`items.${index}.date`)}
               </p>
-              <div  className="flex gap-16">
-             
+
+              <div className="flex gap-16">
                 <p className="text-justify">
-                  {education.description}
+                  {tEducation(`items.${index}.description`)}
                 </p>
 
-                {education.src && (
-                  <img src={education.src} alt={education.alt} className="hidden lg:block"/>
-                )}
-              </div>
 
+                  <img
+                    src={tEducation(`items.${index}.src`)}
+                    alt={tEducation(`items.${index}.alt`)}
+                    className="hidden lg:block"
+                  />
+
+              </div>
             </div>
           ))}
-
         </div>
-
       </section>
+
 
       <section id="projects" className="py-5">
         <h2>
-          Proyectos
+          {tProjects('title')}
         </h2>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 justify-items-center py-6">
@@ -174,7 +189,7 @@ export default function Home() {
 
       <section id="contact" className="py-5">
         <h2>
-          Hablemos
+          {tContact('title')} 
         </h2>
 
         <div className="flex flex-col gap-5 items-center lg:flex-row lg:justify-center lg:gap-16 py-6">
@@ -186,7 +201,7 @@ export default function Home() {
 
             <div className="contact-info">
               <p>lizvergarareategui@gmail.com</p>
-              <a href="mailto:lizvergarareategui@gmail.com" className="underline">Enviar mensaje</a>
+              <a href="mailto:lizvergarareategui@gmail.com" className="underline">{tContact('message')}</a>
             </div>
           </div>
 
@@ -197,7 +212,7 @@ export default function Home() {
 
             <div className="contact-info">
               <p>PER +51 975 203 430</p>
-              <a href="https://wa.me/+51975203430" target="_blank" className="underline">Enviar mensaje</a>
+              <a href="https://wa.me/+51975203430" target="_blank" className="underline">{tContact('message')}</a>
             </div>
           </div>
 

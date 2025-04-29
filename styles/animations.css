@@ -264,7 +264,28 @@ body {
   background-color: rgba(25, 24, 37, 0.7);
 }
 
+/* --------------------EDUCATION-------------------------------- */
 
+/* item (pink circle) */
+/* globals.css */
+
+.item::before {
+  content: '';
+  position: absolute;
+  top: 0.25rem; /* top-1 en Tailwind */
+  left: -0.55rem;
+  width: 1rem; /* w-4 */
+  height: 1rem; /* h-4 */
+  border-radius: 9999px; /* rounded-full */
+  border: 4px solid #FFA3FD; /* border-pink-400 */
+  background-color: white; /* bg-white por defecto */
+}
+
+
+.dark .item::before {
+  background-color: #1e1b2e; /* tu color para modo oscuro */
+  border-color: #FFA3FD; /* puedes mantener el borde igual o cambiarlo si quieres */
+}
 
 
 /* -----------------------PROJECTS----------------------------------- */
