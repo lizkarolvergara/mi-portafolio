@@ -54,6 +54,9 @@ export default function Home() {
             <a href="https://github.com/lizkarolvergara" target="_blank" className="hover-scale focus-in-2">
               <img src="/icon-github.svg" alt="Github" className="icon-svg"/>
             </a>
+            <a href="https://www.instagram.com/hueleanaranjas/" target="_blank" className="hover-scale focus-in-3">
+              <img src="/icon-instagram.svg" alt="Instagram" className="icon-svg"/>
+            </a>
           </div>
 
         </div>
@@ -206,6 +209,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* WhatsApp desactivado por ahora
           <div className="contact-pill group">
             <div className="icon-container">
               <img src="/icon-whatsapp.svg" alt="whatsapp" className="icon-svg"/>
@@ -216,6 +220,7 @@ export default function Home() {
               <a href="https://wa.me/+51975203430" target="_blank" className="underline">{tContact('message')}</a>
             </div>
           </div>
+          */}
 
         </div>
       </section>
