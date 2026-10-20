@@ -9,8 +9,8 @@
     "hero": {
         "greeting": "Hola, mi nombre es",
         "subtitle": "y creo micro apps con IA",
-        "description-1": "Soy ingeniera civil colegiada con 9 años de experiencia en supervisión de obra y oficina técnica, y egresada de Desarrollo de Sistemas Front-end y Back-end en IDAT. Conozco de primera mano los problemas del día a día en obra, y ahora también desarrollo las herramientas para resolverlos.",
-        "description-2": "Trabajo con IA como parte de mi flujo de desarrollo para crear micro apps: aplicaciones pequeñas, enfocadas en una necesidad concreta y hechas para usarse de verdad, como Yanashpa Proyectos, que hoy se usa en obra, y Marea. Mi stack principal es React, TypeScript, Supabase y Java."
+        "description-1": "Desarrollo micro apps: aplicaciones web pequeñas, enfocadas en resolver una necesidad concreta y hechas para usarse de verdad. Trabajo con IA como parte de mi flujo de desarrollo.",
+        "description-2": "Mis proyectos más recientes son Yanashpa Proyectos, una PWA que hoy se usa para supervisar obras en campo, y Marea, una app de registro emocional diario. Soy egresada de Desarrollo de Sistemas Front-end y Back-end en IDAT y también ingeniera civil, así que conozco de cerca los problemas que mis apps buscan resolver."
     },
     "skills": {
         "title": "Skills"
@@ -21,7 +21,7 @@
             {
                 "name": "Desarrollo de Sistemas Front-end y Back-end - IDAT",
                 "date": "Enero 2024 - Agosto 2026",
-                "description": "Egresada con el 100 % del plan de estudios aprobado. Programación orientada a objetos con Java, desarrollo web y móvil con React y React Native, bases de datos relacionales y no relacionales, servicios web, patrones de diseño y calidad de software. Computación en la nube con AWS, DevOps con Docker y Jenkins, ciberseguridad, desarrollo de aplicaciones seguras e inteligencia artificial. Proyectos aplicados que integran las capas de datos, negocio y vista, trabajados con metodologías ágiles.",
+                "description": "Programación orientada a objetos con Java, desarrollo web y móvil con React y React Native, bases de datos relacionales y no relacionales, servicios web, patrones de diseño y calidad de software. Computación en la nube con AWS, DevOps con Docker y Jenkins, ciberseguridad, desarrollo de aplicaciones seguras e inteligencia artificial. Proyectos aplicados que integran las capas de datos, negocio y vista, trabajados con metodologías ágiles.",
                 "src": "icon-idat.svg",
                 "alt": "idat"
             },
