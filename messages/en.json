@@ -6,49 +6,50 @@
         "projects": "Projects",
         "contact": "Contact"
     },
+
     "hero": {
         "greeting": "Hello, my name is",
-        "subtitle": "and I build AI-powered micro apps",
-        "description-1": "I'm a licensed civil engineer with 9 years of experience in construction supervision and technical office work, and a graduate of Front-end and Back-end Systems Development at IDAT. I know the day-to-day problems of a construction site first-hand, and now I also build the tools to solve them.",
-        "description-2": "I use AI as part of my development workflow to build micro apps: small, focused applications that solve one specific need and are made to be used for real, like Yanashpa Proyectos, which is in use on site today, and Marea. My main stack is React, TypeScript, Supabase and Java."
+        "subtitle": "and I develop web pages",
+        "description-1": "Currently a student of Front-end and Back-end Systems Development at IDAT Institute. I am passionate about creating clean, accessible, and functional interfaces by combining design and technology to enhance user experience.",
+        "description-2": "With knowledge in React, Angular, and Node, applying best development practices and agile methodologies like Scrum. I am always exploring new technologies and ways to optimize performance and usability in my projects.",
+        "download": "Download CV"
     },
+    
     "skills": {
         "title": "Skills"
     },
+    
     "education": {
         "title": "Education",
         "items": [
             {
-                "name": "Front-end and Back-end Systems Development - IDAT",
-                "date": "January 2024 - August 2026",
-                "description": "Graduated having passed 100% of the curriculum. Object-oriented programming with Java, web and mobile development with React and React Native, relational and non-relational databases, web services, design patterns and software quality. Cloud computing with AWS, DevOps with Docker and Jenkins, cybersecurity, secure application development and artificial intelligence. Applied projects integrating the data, business and view layers, built with agile methodologies.",
-                "src": "icon-idat.svg",
-                "alt": "idat"
-            },
-            {
                 "name": "Oracle Next Education Front-end Program",
                 "date": "April 2024 - January 2025",
-                "description": "Front-end development with React and JavaScript: components, navigation, Styled Components, Hooks and API consumption. HTML, responsive CSS, TypeScript, DOM manipulation and AI integration with ChatGPT and GitHub Copilot. Complemented by training in personal development, agile fundamentals and entrepreneurship.",
+                "description": "Front-End Development with React and JavaScript: component creation, navigation, styling with Styled Components, Hooks, and API consumption. Training in HTML, responsive CSS, Typescript, DOM manipulation, and AI integration with ChatGPT and GitHub Copilot. Complemented by Personal Development and Professional Leadership training, focusing on productivity, habit management, LinkedIn profile optimization, agile fundamentals, and entrepreneurship.",
                 "src": "icon-alura-latam.svg",
                 "alt": "alura-latam"
             },
             {
+                "name": "IDAT Higher Education Institute",
+                "date": "January 2024 - Present",
+                "description": "Training in structured and object-oriented programming, web development, interface design, and relational and non-relational databases. Instruction in design patterns, software quality, cybersecurity, DevOps, and IT auditing. Emphasis on agile methodologies, cloud computing, digital transformation, and artificial intelligence. Development of applied projects in business software, data, business, and view layer integration, and the creation of mobile and cloud applications.",
+                "src": "icon-idat.svg",
+                "alt": "idat"
+            },
+            {
                 "name": "Civil Engineering - National University of San Martín",
                 "date": "March 2012 - December 2016",
-                "description": "Bachelor's degree and professional title in Civil Engineering, licensed by the Peruvian College of Engineers (CIP) since 2019. Since 2017 I have worked in technical office, technical project files and construction supervision on road, education, healthcare, sanitation, commercial and housing projects for the public and private sectors.",
+                "description": "",
                 "src": "",
                 "alt": ""
             }
         ]
     },
+    
     "projects": {
-        "title": "Projects",
-        "featured": "Featured",
-        "items": {
-            "yanashpa": "PWA for supervising contracted construction work: projects, open items, site walks with photos and PDF reports. In real use on site.",
-            "marea": "App to log daily stress, emotions and a few habits, spot patterns over time and generate summaries."
-        }
+        "title": "Projects"
     },
+    
     "contact": {
         "title": "Let's Talk",
         "message": "Send message"

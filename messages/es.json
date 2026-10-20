@@ -6,51 +6,52 @@
         "projects": "Proyectos",
         "contact": "Contacto"
     },
+
     "hero": {
-        "greeting": "Hola, mi nombre es",
-        "subtitle": "y creo micro apps con IA",
-        "description-1": "Soy ingeniera civil colegiada con 9 años de experiencia en supervisión de obra y oficina técnica, y egresada de Desarrollo de Sistemas Front-end y Back-end en IDAT. Conozco de primera mano los problemas del día a día en obra, y ahora también desarrollo las herramientas para resolverlos.",
-        "description-2": "Trabajo con IA como parte de mi flujo de desarrollo para crear micro apps: aplicaciones pequeñas, enfocadas en una necesidad concreta y hechas para usarse de verdad, como Yanashpa Proyectos, que hoy se usa en obra, y Marea. Mi stack principal es React, TypeScript, Supabase y Java."
-    },
+            "greeting": "Hola, mi nombre es",
+            "subtitle": "y desarrollo páginas web",
+            "description-1": "Actualmente estudiante de Desarrollo de Sistemas Front-end y Back-end en el instituto IDAT. Me interesa crear interfaces limpias, accesibles y funcionales, combinando diseño y tecnología para mejorar la experiencia del usuario.",
+            "description-2": "Con conocimientos en React, Angular y Node, aplicando buenas prácticas de desarrollo y metodologías ágiles como Scrum. Siempre estoy explorando nuevas tecnologías y formas de optimizar el rendimiento y la usabilidad en mis proyectos",
+            "download": "Descargar CV"
+        },
+    
     "skills": {
-        "title": "Skills"
-    },
+            "title": "Skills"
+        },
+    
     "education": {
-        "title": "Formación",
-        "items": [
-            {
-                "name": "Desarrollo de Sistemas Front-end y Back-end - IDAT",
-                "date": "Enero 2024 - Agosto 2026",
-                "description": "Egresada con el 100 % del plan de estudios aprobado. Programación orientada a objetos con Java, desarrollo web y móvil con React y React Native, bases de datos relacionales y no relacionales, servicios web, patrones de diseño y calidad de software. Computación en la nube con AWS, DevOps con Docker y Jenkins, ciberseguridad, desarrollo de aplicaciones seguras e inteligencia artificial. Proyectos aplicados que integran las capas de datos, negocio y vista, trabajados con metodologías ágiles.",
-                "src": "icon-idat.svg",
-                "alt": "idat"
-            },
-            {
-                "name": "Programa Oracle Next Education Front-end",
-                "date": "Abril 2024 - Enero 2025",
-                "description": "Desarrollo Front-end con React y JavaScript: componentes, navegación, Styled Components, Hooks y consumo de APIs. HTML, CSS responsivo, TypeScript, manipulación del DOM e integración de IA con ChatGPT y GitHub Copilot. Complementado con formación en desarrollo personal, fundamentos ágiles y emprendimiento.",
-                "src": "icon-alura-latam.svg",
-                "alt": "alura-latam"
-            },
-            {
-                "name": "Ingeniería Civil - Universidad Nacional de San Martín",
-                "date": "Marzo 2012 - Diciembre 2016",
-                "description": "Bachiller y título profesional de Ingeniera Civil, colegiada en el CIP desde 2019. Desde 2017 trabajo en oficina técnica, expedientes técnicos y supervisión de obra, en proyectos viales, educativos, de salud, saneamiento, comerciales y de vivienda, para los sectores público y privado.",
-                "src": "",
-                "alt": ""
-            }
-        ]
-    },
+            "title": "Formación",
+            "items": [
+                {
+                    "name": "Programa Oracle Next Education Front-end",
+                    "date": "Abril 2024 - Enero 2025",
+                    "description": "Desarrollo Front-End con React y JavaScript: creación de componentes, navegación, estilos con Styled Components, Hooks y consumo de APIs. Capacitación en HTML, CSS responsivo, Typescript, manipulación del DOM e integración de IA con ChatGPT y GitHub Copilot. Complementado con formación en Desarrollo Personal y Protagonismo Profesional, enfocada en productividad, gestión de hábitos, optimización del perfil en LinkedIn, fundamentos ágiles y emprendimiento.",
+                    "src": "icon-alura-latam.svg",
+                    "alt": "alura-latam"
+                },
+                {
+                    "name": "Escuela de Educación Superior Tecnológica IDAT",
+                    "date": "Enero 2024 - Actualmente",
+                    "description": "Formación en programación estructurada y orientada a objetos, desarrollo web, diseño de interfaces y bases de datos relacionales y no relacionales. Capacitación en patrones de diseño, calidad de software, ciberseguridad, DevOps y auditoría de TI. Enfoque en metodologías ágiles, computación en la nube, transformación digital e inteligencia artificial. Desarrollo de proyectos aplicados en software empresarial, integración de capas de datos, negocio y vista, y creación de aplicaciones móviles y en la nube.",
+                    "src": "icon-idat.svg",
+                    "alt": "idat"
+                },
+                {
+                    "name": "Ingeniería Civil - Universidad Nacional de San Martín",
+                    "date": "Marzo 2012 - Diciembre 2016",
+                    "description": "",
+                    "src": "",
+                    "alt": ""
+                }
+            ]
+        },
+    
     "projects": {
-        "title": "Proyectos",
-        "featured": "Destacado",
-        "items": {
-            "yanashpa": "PWA para supervisar obras contratadas: proyectos, pendientes, recorridos de campo con fotos y reportes en PDF. En uso real en obra.",
-            "marea": "App para registrar el estrés, las emociones y algunos hábitos del día, ver patrones en el tiempo y generar resúmenes."
-        }
-    },
+            "title": "Proyectos"
+        },
+    
     "contact": {
-        "title": "Hablemos",
-        "message": "Enviar mensaje"
-    }
+            "title": "Hablemos",
+            "message": "Enviar mensaje"
+        }
 }
