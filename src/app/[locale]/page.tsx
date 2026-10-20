@@ -146,6 +146,7 @@ export default function Home() {
 
                 <div className="project-links absolute inset-0 flex items-center justify-center gap-2  opacity-0 transition-opacity duration-300 ${activeCard === index || !isMobile ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'">
 
+{project.demo && (
                   <a href={project.demo} target="_blank" 
                     onClick={(e) => {
                       if (isMobile && activeCard !== index) {
@@ -157,6 +158,7 @@ export default function Home() {
                     <img src="/icon-demo.svg" className=" w-[20px] h-[20px] icon-svg" />
                     Demo
                   </a>
+                  )}
 
 {project.repository && (
                   <a href={project.repository} target="_blank" 
@@ -201,8 +203,8 @@ export default function Home() {
             </div>
 
             <div className="contact-info">
-              <p>lizvergarareategui@gmail.com</p>
-              <a href="mailto:lizvergarareategui@gmail.com" className="underline">{tContact('message')}</a>
+              <p>orangesdevs@gmail.com</p>
+              <a href="mailto:orangesdevs@gmail.com" className="underline">{tContact('message')}</a>
             </div>
           </div>
 
