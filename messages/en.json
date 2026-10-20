@@ -42,12 +42,7 @@
         ]
     },
     "projects": {
-        "title": "Projects",
-        "featured": "Featured",
-        "items": {
-            "yanashpa": "PWA for supervising contracted construction work: projects, open items, site walks with photos and PDF reports. In real use on site.",
-            "marea": "App to log daily stress, emotions and a few habits, spot patterns over time and generate summaries."
-        }
+        "title": "Projects"
     },
     "contact": {
         "title": "Let's Talk",

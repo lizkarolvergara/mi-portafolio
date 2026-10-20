@@ -42,12 +42,7 @@
         ]
     },
     "projects": {
-        "title": "Proyectos",
-        "featured": "Destacado",
-        "items": {
-            "yanashpa": "PWA para supervisar obras contratadas: proyectos, pendientes, recorridos de campo con fotos y reportes en PDF. En uso real en obra.",
-            "marea": "App para registrar el estrés, las emociones y algunos hábitos del día, ver patrones en el tiempo y generar resúmenes."
-        }
+        "title": "Proyectos"
     },
     "contact": {
         "title": "Hablemos",

@@ -137,18 +137,8 @@ export default function Home() {
               }
             }}>
               
-              <div className="px-3 py-2 text-center">
-                <p>
-                  {project.name}
-                  {project.key && (
-                    <span className="ml-2 align-middle text-xs font-bold text-[#865DFF] border border-[#865DFF] rounded-full px-2 py-0.5">
-                      {tProjects('featured')}
-                    </span>
-                  )}
-                </p>
-                {project.key && (
-                  <p className="text-sm opacity-80 pt-1">{tProjects(`items.${project.key}`)}</p>
-                )}
+              <div>
+                <p className="text-center py-2">{project.name}</p>
               </div>
   
               <div className="relative">
