@@ -9,8 +9,8 @@
     "hero": {
         "greeting": "Hello, my name is",
         "subtitle": "and I build AI-powered micro apps",
-        "description-1": "I'm a licensed civil engineer with 9 years of experience in construction supervision and technical office work, and a graduate of Front-end and Back-end Systems Development at IDAT. I know the day-to-day problems of a construction site first-hand, and now I also build the tools to solve them.",
-        "description-2": "I use AI as part of my development workflow to build micro apps: small, focused applications that solve one specific need and are made to be used for real, like Yanashpa Proyectos, which is in use on site today, and Marea. My main stack is React, TypeScript, Supabase and Java."
+        "description-1": "I build micro apps: small web applications focused on solving one specific need and made to be used for real. I use AI as part of my development workflow.",
+        "description-2": "My most recent projects are Yanashpa Proyectos, a PWA used today to supervise construction work on site, and Marea, a daily emotional journal app. I graduated in Front-end and Back-end Systems Development from IDAT and I'm also a civil engineer, so I know first-hand the problems my apps aim to solve."
     },
     "skills": {
         "title": "Skills"
@@ -21,7 +21,7 @@
             {
                 "name": "Front-end and Back-end Systems Development - IDAT",
                 "date": "January 2024 - August 2026",
-                "description": "Graduated having passed 100% of the curriculum. Object-oriented programming with Java, web and mobile development with React and React Native, relational and non-relational databases, web services, design patterns and software quality. Cloud computing with AWS, DevOps with Docker and Jenkins, cybersecurity, secure application development and artificial intelligence. Applied projects integrating the data, business and view layers, built with agile methodologies.",
+                "description": "Object-oriented programming with Java, web and mobile development with React and React Native, relational and non-relational databases, web services, design patterns and software quality. Cloud computing with AWS, DevOps with Docker and Jenkins, cybersecurity, secure application development and artificial intelligence. Applied projects integrating the data, business and view layers, built with agile methodologies.",
                 "src": "icon-idat.svg",
                 "alt": "idat"
             },
