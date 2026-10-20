@@ -26,6 +26,30 @@
         "repository": ""
     },
     {
+        "name": "Arakura",
+        "src": "proj-arakura.png",
+        "alt": "Arakura",
+        "skills": [
+            "s-react.svg",
+            "s-javascript.svg",
+            "s-tailwind.svg"
+        ],
+        "demo": "https://arakura.vercel.app",
+        "repository": "https://github.com/lizkarolvergara/arakura"
+    },
+    {
+        "name": "Tushkuna",
+        "src": "proj-tushkuna.png",
+        "alt": "Tushkuna",
+        "skills": [
+            "s-java.svg",
+            "s-sql.svg",
+            "s-bootstrap.svg"
+        ],
+        "demo": "",
+        "repository": "https://github.com/lizkarolvergara/tushkuna-security"
+    },
+    {
         "name": "Static Website e-commerce",
         "src": "proj-izitech.png",
         "alt": "izitech",
