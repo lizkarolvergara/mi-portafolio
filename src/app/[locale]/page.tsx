@@ -54,9 +54,6 @@ export default function Home() {
             <a href="https://github.com/lizkarolvergara" target="_blank" className="hover-scale focus-in-2">
               <img src="/icon-github.svg" alt="Github" className="icon-svg"/>
             </a>
-            <a href="/cv-lizkarolvergara.pdf" download className="underline font-medium focus-in-3">
-            {tHero('download')}
-            </a>
           </div>
 
         </div>
@@ -107,11 +104,13 @@ export default function Home() {
                 </p>
 
 
-                  <img
-                    src={tEducation(`items.${index}.src`)}
-                    alt={tEducation(`items.${index}.alt`)}
-                    className="hidden lg:block"
-                  />
+                  {tEducation(`items.${index}.src`) && (
+                    <img
+                      src={tEducation(`items.${index}.src`)}
+                      alt={tEducation(`items.${index}.alt`)}
+                      className="hidden lg:block"
+                    />
+                  )}
 
               </div>
             </div>
@@ -128,7 +127,7 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 justify-items-center py-6">
 
           {projects.map((project, index) => (
-            <div key={index} className="project-card flex flex-col rounded-xl border-2 border-[#FFA3FD]" onClick={() => {
+            <div key={index} className="project-card flex flex-col w-full max-w-[370px] h-full rounded-xl border-2 border-[#FFA3FD]" onClick={() => {
               if (isMobile) {
                 if (activeCard === index) {
                   setActiveCard(null)
@@ -143,7 +142,7 @@ export default function Home() {
               </div>
   
               <div className="relative">
-                <img src={project.src} alt={project.alt} className="project-img p-1"/>
+                <img src={project.src} alt={project.alt} className="project-img p-1 aspect-[72/33]"/>
 
                 <div className="project-links absolute inset-0 flex items-center justify-center gap-2  opacity-0 transition-opacity duration-300 ${activeCard === index || !isMobile ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'">
 
@@ -159,6 +158,7 @@ export default function Home() {
                     Demo
                   </a>
 
+{project.repository && (
                   <a href={project.repository} target="_blank" 
                     onClick={(e) => {
                       if (isMobile && activeCard !== index) {
@@ -170,11 +170,12 @@ export default function Home() {
                     <img src="/icon-github.svg" className="px-1 w-[25px] h-[25px] icon-svg" />
                     Repo
                   </a>
+                  )}
 
                 </div>
               </div>
   
-              <div className="flex py-2 justify-center gap-2">
+              <div className="flex py-2 mt-auto justify-center gap-2">
                 {project.skills.map((skill, i) => 
                   <img key={i} src={skill} className="w-8 h-8 icon-svg"/>
                 )}              

@@ -1,101 +1,82 @@
 [
-    { 
-        "src": "/s-react.svg", 
-        "alt": "React", 
-        "name": "React.js" 
+    {
+        "src": "/s-react.svg",
+        "alt": "React",
+        "name": "React.js"
     },
-
-    { 
-        "src": "/s-angular.svg", 
-        "alt": "Angular", 
-        "name": "Angular" 
+    {
+        "src": "/s-angular.svg",
+        "alt": "Angular",
+        "name": "Angular"
     },
-
-    { 
-        "src": "/s-nest.svg", 
-        "alt": "Nest.js", 
-        "name": "Nest.js" 
+    {
+        "src": "/s-nest.svg",
+        "alt": "Nest.js",
+        "name": "Nest.js"
     },
-
-    { 
-        "src": "/s-next.svg", 
-        "alt": "Next.js", 
-        "name": "Next.js" 
+    {
+        "src": "/s-next.svg",
+        "alt": "Next.js",
+        "name": "Next.js"
     },
-
-    { 
-        "src": "/s-node.svg", 
-        "alt": "Node.js", 
-        "name": "Node.js" 
+    {
+        "src": "/s-node.svg",
+        "alt": "Node.js",
+        "name": "Node.js"
     },
-
-    { 
-        "src": "/s-javascript.svg", 
-        "alt": "JavaScript", 
-        "name": "JavaScript" 
+    {
+        "src": "/s-javascript.svg",
+        "alt": "JavaScript",
+        "name": "JavaScript"
     },
-
-    { 
-        "src": "/s-typescript.svg", 
-        "alt": "Typescript", 
-        "name": "Typescript" 
+    {
+        "src": "/s-typescript.svg",
+        "alt": "Typescript",
+        "name": "Typescript"
     },
-
-    { 
-        "src": "/s-html.svg", 
-        "alt": "HTML5", 
-        "name": "HTML5" 
+    {
+        "src": "/s-java.svg",
+        "alt": "Java",
+        "name": "Java"
     },
-
-    { 
-        "src": "/s-css.svg", 
-        "alt": "CSS3", 
-        "name": "CSS3" 
+    {
+        "src": "/s-html.svg",
+        "alt": "HTML5",
+        "name": "HTML5"
     },
-
-    { 
-        "src": "/s-bootstrap.svg", 
-        "alt": "Bootstrap", 
-        "name": "Bootstrap" 
+    {
+        "src": "/s-css.svg",
+        "alt": "CSS3",
+        "name": "CSS3"
     },
-
-    { 
-        "src": "/s-tailwind.svg", 
-        "alt": "Tailwind CSS", 
-        "name": "Tailwind" 
+    {
+        "src": "/s-tailwind.svg",
+        "alt": "Tailwind CSS",
+        "name": "Tailwind"
     },
-
-    { 
-        "src": "/s-git.svg", 
-        "alt": "Git", 
-        "name": "Git" 
+    {
+        "src": "/s-git.svg",
+        "alt": "Git",
+        "name": "Git"
     },
-
-    { 
-        "src": "/s-github.svg", 
-        "alt": "GitHub", 
-        "name": "GitHub" 
+    {
+        "src": "/s-sql.svg",
+        "alt": "SQL",
+        "name": "SQL"
     },
-
-    { 
-        "src": "/s-sql.svg", 
-        "alt": "SQL", 
-        "name": "SQL" 
+    {
+        "src": "/s-docker.svg",
+        "alt": "Docker",
+        "name": "Docker"
     },
-
-    { 
-        "src": "/s-docker.svg", 
-        "alt": "Docker", 
-        "name": "Docker" 
+    {
+        "src": "/s-figma.svg",
+        "alt": "Figma",
+        "name": "Figma"
     },
-
-
-
-
-
-    { 
-        "src": "/s-figma.svg", 
-        "alt": "Figma", 
-        "name": "Figma" 
+    {
+        "src": "/s-ia.svg",
+        "alt": "Inteligencia artificial",
+        "name": "Claude / ChatGPT"
     }
 ]
